@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { KristoryLogo } from "@/components/kristory-logo";
 import { IpCopyButton } from "@/components/ip-copy-button";
+import { ServerStatus } from "@/components/server-status";
 
 export default function Home() {
   const advantages = [
@@ -55,8 +56,9 @@ export default function Home() {
           <p className="mt-4 max-w-2xl text-lg text-foreground/80 md:text-xl">
             Где каждая история сияет
           </p>
-          <div className="my-10">
+          <div className="my-10 flex flex-col items-center gap-4">
             <IpCopyButton ipAddress="kristory.fun" />
+            <ServerStatus />
           </div>
           <p className="max-w-md text-sm text-foreground/60">
             Для входа на сервер необходимо подать заявку. Следите за новостями!
