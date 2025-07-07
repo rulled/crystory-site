@@ -79,8 +79,8 @@ export function ServerStatus() {
     <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-foreground/80">
         <div className="flex items-center gap-2">
             <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+                <span className="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
             </span>
             <span>Сервер онлайн</span>
         </div>

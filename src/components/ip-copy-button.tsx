@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { Copy, Check } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
@@ -11,6 +12,7 @@ export function IpCopyButton({ ipAddress }: { ipAddress: string }) {
   const { toast } = useToast();
 
   const handleCopy = () => {
+    if (isCopied) return;
     navigator.clipboard.writeText(ipAddress).then(
       () => {
         setIsCopied(true);
@@ -31,6 +33,11 @@ export function IpCopyButton({ ipAddress }: { ipAddress: string }) {
     );
   };
 
+  const iconVariants = {
+    hidden: { scale: 0, opacity: 0, rotate: -90 },
+    visible: { scale: 1, opacity: 1, rotate: 0 },
+  };
+
   return (
     <div className="flex items-center justify-center gap-2 rounded-lg border border-primary/20 bg-background/50 p-2 backdrop-blur-sm sm:p-3">
       <span className="font-code text-lg text-primary sm:text-xl md:text-2xl">
@@ -40,10 +47,36 @@ export function IpCopyButton({ ipAddress }: { ipAddress: string }) {
         onClick={handleCopy}
         variant="ghost"
         size="icon"
-        className="text-primary hover:bg-primary/20 hover:text-primary glow-on-hover"
+        className="relative h-10 w-10 text-primary hover:bg-primary/20 hover:text-primary glow-on-hover"
         aria-label="Copy IP address"
       >
-        {isCopied ? <Check className="h-5 w-5" /> : <Copy className="h-5 w-5" />}
+        <AnimatePresence mode="wait" initial={false}>
+          {isCopied ? (
+            <motion.div
+              key="check"
+              variants={iconVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="absolute"
+            >
+              <Check className="h-5 w-5" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="copy"
+              variants={iconVariants}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="absolute"
+            >
+              <Copy className="h-5 w-5" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </Button>
     </div>
   );
