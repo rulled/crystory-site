@@ -233,16 +233,13 @@ export default function Home() {
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                    <Image
-                        src="https://placehold.co/1280x720.png"
-                        alt="Cinematic trailer placeholder"
-                        data-ai-hint="fantasy world cinematic"
-                        layout="fill"
-                        objectFit="cover"
-                    />
-                     <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20 text-white/70 transition-transform hover:scale-110" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    </div>
+                    <iframe
+                        src="https://player.vimeo.com/video/1035276791?h=2e190a614d&title=0&byline=0&portrait=0"
+                        className="absolute top-0 left-0 w-full h-full"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </motion.div>
             </div>
         </motion.section>
