@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from "next/image";
@@ -113,9 +112,9 @@ export default function Home() {
             <Image 
               src="/name.png" 
               alt="Kristory" 
-              width={500}
-              height={100}
-              className="w-auto h-12 md:h-16 lg:h-20"
+              width={1000}
+              height={200}
+              className="w-auto h-24 md:h-32 lg:h-40"
             />
           </motion.div>
           <motion.p
@@ -332,4 +331,3 @@ export default function Home() {
       </footer>
     </div>
   );
-}
