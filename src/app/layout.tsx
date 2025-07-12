@@ -6,6 +6,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Kristory - Кристальная История",
   description: "Приватный Minecraft сервер с уникальным сюжетом и кастомной картой.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
