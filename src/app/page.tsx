@@ -41,6 +41,12 @@ export default function Home() {
     },
   ];
 
+  const creators = [
+    { name: "threehearts", url: "https://t.me/thr33hrts" },
+    { name: "10 ночей", url: "https://t.me/uwusquadd" },
+    { name: "xdmd", url: "https://t.me/xdmdgang" },
+  ];
+
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -276,26 +282,35 @@ export default function Home() {
         </motion.section>
 
         {/* Creators Section */}
-        <motion.section 
-          id="creators" 
+        <motion.section
+          id="creators"
           className="container mx-auto py-16 px-4 text-center md:py-24"
           variants={sectionVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-            <h2 className="font-headline text-4xl text-gradient md:text-5xl">Создатели</h2>
-            <motion.div 
-              className="mt-10 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={cardContainerVariants}
-            >
-                <motion.div variants={cardVariants} className="font-headline text-3xl text-foreground/80 transition-colors hover:text-primary">threehearts</motion.div>
-                <motion.div variants={cardVariants} className="font-headline text-3xl text-foreground/80 transition-colors hover:text-primary">10 ночей</motion.div>
-                <motion.div variants={cardVariants} className="font-headline text-3xl text-foreground/80 transition-colors hover:text-primary">xdmd</motion.div>
-            </motion.div>
+          <h2 className="font-headline text-4xl text-gradient md:text-5xl">Создатели</h2>
+          <motion.div
+            className="mt-10 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={cardContainerVariants}
+          >
+            {creators.map((creator) => (
+              <motion.a
+                key={creator.name}
+                href={creator.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                variants={cardVariants}
+                className="font-headline text-3xl text-foreground/80 transition-colors hover:text-primary"
+              >
+                {creator.name}
+              </motion.a>
+            ))}
+          </motion.div>
         </motion.section>
       </main>
 
@@ -307,7 +322,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
