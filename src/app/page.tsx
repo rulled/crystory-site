@@ -8,8 +8,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { KristoryLogo } from "@/components/kristory-logo";
 import { IpCopyButton } from "@/components/ip-copy-button";
 import { ServerStatus } from "@/components/server-status";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   const advantages = [
     {
       icon: <Map className="h-8 w-8 text-primary" />,
@@ -285,9 +292,11 @@ export default function Home() {
 
       <footer className="py-8">
         <div className="container mx-auto text-center text-sm text-foreground/60">
-            <p>&copy; {new Date().getFullYear()} Kristory.fun. Все права защищены.</p>
+            {year && <p>&copy; {year} Kristory.fun. Все права защищены.</p>}
         </div>
       </footer>
     </div>
   );
 }
+
+    
