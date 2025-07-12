@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Cpu, HeartHandshake, Map, Server, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { KristoryLogo } from "@/components/kristory-logo";
 import { IpCopyButton } from "@/components/ip-copy-button";
 import { ServerStatus } from "@/components/server-status";
 import { useEffect, useState } from "react";
@@ -96,17 +95,29 @@ export default function Home() {
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
+            className="mb-8"
           >
-            <KristoryLogo className="mb-8 h-24 w-24 md:h-32 md:w-32" />
+            <Image 
+              src="/icon.png" 
+              alt="Kristory Logo" 
+              width={128} 
+              height={128}
+              className="h-24 w-24 md:h-32 md:w-32"
+            />
           </motion.div>
-          <motion.h1
+          <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-            className="font-headline text-5xl tracking-wider md:text-7xl lg:text-8xl"
           >
-            Kristory
-          </motion.h1>
+            <Image 
+              src="/name.png" 
+              alt="Kristory" 
+              width={500}
+              height={100}
+              className="w-auto h-12 md:h-16 lg:h-20"
+            />
+          </motion.div>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
