@@ -113,7 +113,7 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-            className="my-10 flex flex-col items-center gap-4 sm:flex-row"
+            className="my-10 flex flex-col items-center gap-4"
           >
             <IpCopyButton ipAddress="kristory.fun" />
             <LauncherDownloadButton repo="rulled/crystory-launcher" />
