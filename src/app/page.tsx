@@ -9,6 +9,7 @@ import { KristoryLogo } from "@/components/kristory-logo";
 import { IpCopyButton } from "@/components/ip-copy-button";
 import { ServerStatus } from "@/components/server-status";
 import { useEffect, useState } from "react";
+import { LauncherDownloadButton } from "@/components/launcher-download-button";
 
 export default function Home() {
   const [year, setYear] = useState<number | null>(null);
@@ -112,16 +113,24 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-            className="my-10 flex flex-col items-center gap-4"
+            className="my-10 flex flex-col items-center gap-4 sm:flex-row"
           >
             <IpCopyButton ipAddress="kristory.fun" />
+            <LauncherDownloadButton repo="rulled/crystory-launcher" />
+          </motion.div>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
+            className="flex flex-col items-center gap-4"
+          >
             <ServerStatus />
           </motion.div>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8, ease: "easeOut" }}
-            className="max-w-md text-sm text-foreground/60"
+            className="mt-8 max-w-md text-sm text-foreground/60"
           >
             Для входа на сервер необходимо подать заявку. Следите за новостями!
           </motion.p>
@@ -298,5 +307,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
