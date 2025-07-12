@@ -101,7 +101,7 @@ export default function Home() {
               alt="Kristory Logo" 
               width={128} 
               height={128}
-              className="h-24 w-24 md:h-32 md:w-32"
+              className="h-24 w-auto md:h-32"
             />
           </motion.div>
           <motion.div
@@ -114,7 +114,7 @@ export default function Home() {
               alt="Kristory" 
               width={1000}
               height={200}
-              className="w-auto h-24 md:h-32 lg:h-40"
+              className="w-auto h-32 md:h-48 lg:h-56"
             />
           </motion.div>
           <motion.p
@@ -331,3 +331,4 @@ export default function Home() {
       </footer>
     </div>
   );
+}
