@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from "next/image";
@@ -114,7 +115,7 @@ export default function Home() {
               alt="Kristory" 
               width={1000}
               height={200}
-              className="w-auto h-32 md:h-48 lg:h-56"
+              className="w-auto h-32 md:h-48 lg:h-56 [filter:drop-shadow(0_0_10px_hsl(var(--primary)/0.6))]"
             />
           </motion.div>
           <motion.p
