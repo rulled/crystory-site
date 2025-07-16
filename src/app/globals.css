@@ -4,6 +4,22 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Kiyosuna Sans';
+    src: url('/fonts/KiyosunaSans-L-1.0.1.woff2') format('woff2'),
+         url('/fonts/KiyosunaSans-L-1.0.1.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Kiyosuna Sans';
+    src: url('/fonts/KiyosunaSans-B-1.0.1.woff2') format('woff2'),
+         url('/fonts/KiyosunaSans-B-1.0.1.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 277 88% 16%;

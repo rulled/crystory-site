@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-        headline: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        body: ['"Kiyosuna Sans"', 'Helvetica', 'Arial', 'sans-serif'],
+        headline: ['"Kiyosuna Sans"', 'Helvetica', 'Arial', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
