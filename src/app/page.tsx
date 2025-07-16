@@ -133,7 +133,7 @@ export default function Home() {
             className="my-10 flex flex-col items-center gap-4"
           >
             <IpCopyButton ipAddress="kristory.fun" />
-            <LauncherDownloadButton repo="rulled/crystory-launcher" />
+            <LauncherDownloadButton repo="rulled/kristory-launcher" />
           </motion.div>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
