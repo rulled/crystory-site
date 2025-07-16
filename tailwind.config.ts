@@ -11,9 +11,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['"Kiyosuna Sans"', 'Helvetica', 'Arial', 'sans-serif'],
-        headline: ['"Kiyosuna Sans"', 'Helvetica', 'Arial', 'sans-serif'],
-        code: ['monospace'],
+        body: ['"SF Pro Text"', 'Helvetica', 'Arial', 'sans-serif'],
+        headline: ['"SF Pro Display"', 'Helvetica', 'Arial', 'sans-serif'],
+        code: ['"SF Mono"', 'monospace'],
       },
       colors: {
         background: 'hsl(var(--background))',
