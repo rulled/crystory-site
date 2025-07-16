@@ -300,13 +300,13 @@ export default function Home() {
         >
           <h2 className="font-headline text-4xl text-gradient md:text-5xl">Создатели</h2>
           <motion.div
-            className="mt-10 flex flex-col items-center justify-center gap-8 md:flex-row md:gap-16"
+            className="mt-10 grid grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-3 md:gap-16"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardContainerVariants}
           >
-            {creators.map((creator) => (
+            {[creators[0], creators[1], creators[2]].map((creator, index) => (
               <motion.a
                 key={creator.name}
                 href={creator.url}
@@ -314,6 +314,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 variants={cardVariants}
                 className="group flex flex-col items-center gap-4 text-foreground/80 transition-all hover:text-primary hover:scale-105"
+                style={{ gridColumn: index === 0 ? '1' : index === 1 ? '2' : '3', justifySelf: index === 0 ? 'end' : index === 2 ? 'start' : 'center' }}
               >
                 <div 
                   className="h-24 w-24 rounded-full bg-foreground/80 icon-mask transition-colors group-hover:bg-primary"
