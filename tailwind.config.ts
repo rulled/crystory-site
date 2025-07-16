@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Alegreya', 'serif'],
-        headline: ['Alegreya', 'serif'],
+        body: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+        headline: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
