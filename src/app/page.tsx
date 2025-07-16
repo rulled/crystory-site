@@ -100,9 +100,9 @@ export default function Home() {
             <Image 
               src="/icon.png" 
               alt="Kristory Logo" 
-              width={128} 
-              height={128}
-              className="h-24 w-auto md:h-32"
+              width={160} 
+              height={160}
+              className="h-28 w-auto md:h-40"
             />
           </motion.div>
           <motion.div
