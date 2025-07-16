@@ -41,9 +41,9 @@ export default function Home() {
   ];
 
   const creators = [
-    { name: "threehearts", url: "https://t.me/thr33hrts" },
-    { name: "10 ночей", url: "https://t.me/uwusquadd" },
-    { name: "xdmd", url: "https://t.me/xdmdgang" },
+    { name: "threehearts", url: "https://t.me/thr33hrts", icon: "/threehearts.png" },
+    { name: "10 ночей", url: "https://t.me/uwusquadd", icon: "/10nochey.png" },
+    { name: "xdmd", url: "https://t.me/xdmdgang", icon: "/xdmd.png" },
   ];
 
   const sectionVariants = {
@@ -313,9 +313,18 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={cardVariants}
-                className="font-headline text-3xl text-foreground/80 transition-colors hover:text-primary"
+                className="flex flex-col items-center gap-4 text-foreground/80 transition-all hover:text-primary hover:scale-105"
               >
-                {creator.name}
+                <Image
+                  src={creator.icon}
+                  alt={`Логотип ${creator.name}`}
+                  width={100}
+                  height={100}
+                  className="h-24 w-24 rounded-full object-cover"
+                />
+                <span className="font-headline text-3xl">
+                  {creator.name}
+                </span>
               </motion.a>
             ))}
           </motion.div>
