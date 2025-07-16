@@ -71,4 +71,15 @@
   .glow-on-hover:hover {
     box-shadow: 0 0 15px 0px hsl(var(--primary) / 0.6), 0 0 5px 0px hsl(var(--primary) / 0.5);
   }
+
+  .icon-mask {
+    mask-image: var(--icon-url);
+    -webkit-mask-image: var(--icon-url);
+    mask-size: contain;
+    -webkit-mask-size: contain;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-position: center;
+  }
 }

@@ -41,9 +41,9 @@ export default function Home() {
   ];
 
   const creators = [
-    { name: "threehearts", url: "https://t.me/thr33hrts", icon: "/threehearts.png" },
-    { name: "10 ночей", url: "https://t.me/uwusquadd", icon: "/10nochey.png" },
-    { name: "xdmd", url: "https://t.me/xdmdgang", icon: "/xdmd.png" },
+    { name: "threehearts", url: "https://t.me/thr33hrts", icon: "/thr33hrts.png" },
+    { name: "10 ночей", url: "https://t.me/uwusquadd", icon: "/uwusquadd.png" },
+    { name: "xdmd", url: "https://t.me/xdmdgang", icon: "/xdmdgang.png" },
   ];
 
   const sectionVariants = {
@@ -313,18 +313,12 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={cardVariants}
-                className="flex flex-col items-center gap-4 text-foreground/80 transition-all hover:text-primary hover:scale-105"
+                className="group flex flex-col items-center gap-4 text-foreground/80 transition-all hover:text-primary hover:scale-105"
               >
-                <div className="relative">
-                  <Image
-                    src={creator.icon}
-                    alt={`Логотип ${creator.name}`}
-                    width={100}
-                    height={100}
-                    className="h-24 w-24 rounded-full object-cover"
-                  />
-                  <div className="absolute inset-0 rounded-full bg-primary/50 mix-blend-multiply transition-colors group-hover:bg-transparent"></div>
-                </div>
+                <div 
+                  className="h-24 w-24 rounded-full bg-foreground/80 icon-mask transition-colors group-hover:bg-primary"
+                  style={{'--icon-url': `url(${creator.icon})`} as React.CSSProperties}
+                 />
                 <span className="font-headline text-3xl">
                   {creator.name}
                 </span>
