@@ -85,7 +85,7 @@ export function ServerStatus() {
             <span>Сервер онлайн</span>
         </div>
         <span>
-            Игроков: {status.players?.online ?? 0} / {status.players?.max ?? '??'}
+            Игроков: {status.players?.online ?? 0}
         </span>
     </div>
   );
