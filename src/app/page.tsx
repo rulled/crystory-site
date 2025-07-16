@@ -315,13 +315,16 @@ export default function Home() {
                 variants={cardVariants}
                 className="flex flex-col items-center gap-4 text-foreground/80 transition-all hover:text-primary hover:scale-105"
               >
-                <Image
-                  src={creator.icon}
-                  alt={`Логотип ${creator.name}`}
-                  width={100}
-                  height={100}
-                  className="h-24 w-24 rounded-full object-cover"
-                />
+                <div className="relative">
+                  <Image
+                    src={creator.icon}
+                    alt={`Логотип ${creator.name}`}
+                    width={100}
+                    height={100}
+                    className="h-24 w-24 rounded-full object-cover"
+                  />
+                  <div className="absolute inset-0 rounded-full bg-primary/50 mix-blend-multiply transition-colors group-hover:bg-transparent"></div>
+                </div>
                 <span className="font-headline text-3xl">
                   {creator.name}
                 </span>
