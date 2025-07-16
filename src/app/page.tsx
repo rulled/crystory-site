@@ -118,14 +118,6 @@ export default function Home() {
               className="w-auto h-32 md:h-48 lg:h-56 [filter:drop-shadow(0_0_40px_hsl(var(--primary)/0.35))]"
             />
           </motion.div>
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            className="mt-4 max-w-2xl text-lg text-foreground/80 md:text-xl"
-          >
-            Где каждая история сияет
-          </motion.p>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -155,7 +147,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-headline text-4xl text-gradient md:text-5xl">
+            <h2 className="font-headline font-bold text-4xl text-gradient md:text-5xl">
               Что такое Kristory?
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
@@ -173,7 +165,7 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="text-center font-headline text-4xl text-gradient md:text-5xl">
+          <h2 className="text-center font-headline font-bold text-4xl text-gradient md:text-5xl">
             Ключевые преимущества
           </h2>
           <motion.div 
@@ -216,7 +208,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
         >
             <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-center font-headline text-4xl text-gradient md:text-5xl">Наш мир</h2>
+                <h2 className="text-center font-headline font-bold text-4xl text-gradient md:text-5xl">Наш мир</h2>
                 <p className="mt-4 text-lg text-foreground/80">
                     Мы готовим кинематографический трейлер, чтобы показать всю красоту нашего мира. А пока - взгляните на небольшой тизер.
                 </p>
@@ -246,7 +238,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-headline text-4xl text-gradient md:text-5xl">
+            <h2 className="font-headline font-bold text-4xl text-gradient md:text-5xl">
               Производительность
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
@@ -290,7 +282,7 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h2 className="font-headline text-4xl text-gradient md:text-5xl">Создатели</h2>
+          <h2 className="font-headline font-bold text-4xl text-gradient md:text-5xl">Создатели</h2>
           <motion.div
             className="mt-10 grid grid-cols-1 items-center justify-items-center gap-8 md:grid-cols-3 md:gap-16"
             initial="hidden"
