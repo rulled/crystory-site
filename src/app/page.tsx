@@ -10,6 +10,8 @@ import { ServerStatus } from "@/components/server-status";
 import { useEffect, useState } from "react";
 import { LauncherDownloadButton } from "@/components/launcher-download-button";
 import { CountdownTimer } from "@/components/countdown-timer";
+import { Button } from "@/components/ui/button";
+import { FAQButton } from "@/components/faq-button";
 
 export default function Home() {
   const [year, setYear] = useState<number | null>(null);
@@ -135,7 +137,10 @@ export default function Home() {
             className="mb-10 flex flex-col items-center gap-2"
           >
             <IpCopyButton ipAddress="kristory.fun" />
-            <LauncherDownloadButton />
+            <div className="flex flex-row gap-3">
+              <LauncherDownloadButton />
+              <FAQButton />
+            </div>
           </motion.div>
           <motion.div
             initial={{ y: 20, opacity: 0 }}
