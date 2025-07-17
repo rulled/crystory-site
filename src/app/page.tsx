@@ -13,7 +13,7 @@ import { CountdownTimer } from "@/components/countdown-timer";
 
 export default function Home() {
   const [year, setYear] = useState<number | null>(null);
-  const targetDate = new Date('2025-07-18T18:00:00+03:00');
+  const targetDate = new Date('2025-07-18T20:00:00+03:00');
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -132,7 +132,7 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-            className="mb-10 flex flex-col items-center gap-4"
+            className="mb-10 flex flex-col items-center gap-2"
           >
             <IpCopyButton ipAddress="kristory.fun" />
             <LauncherDownloadButton />
