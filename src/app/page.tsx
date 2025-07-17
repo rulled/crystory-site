@@ -9,9 +9,11 @@ import { IpCopyButton } from "@/components/ip-copy-button";
 import { ServerStatus } from "@/components/server-status";
 import { useEffect, useState } from "react";
 import { LauncherDownloadButton } from "@/components/launcher-download-button";
+import { CountdownTimer } from "@/components/countdown-timer";
 
 export default function Home() {
   const [year, setYear] = useState<number | null>(null);
+  const targetDate = new Date('2025-07-18T18:00:00+03:00');
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -121,8 +123,16 @@ export default function Home() {
           <motion.div
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
+            className="my-10"
+          >
+            <CountdownTimer targetDate={targetDate} />
+          </motion.div>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-            className="my-10 flex flex-col items-center gap-4"
+            className="mb-10 flex flex-col items-center gap-2"
           >
             <IpCopyButton ipAddress="kristory.fun" />
             <LauncherDownloadButton />
@@ -321,3 +331,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
