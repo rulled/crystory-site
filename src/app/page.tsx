@@ -1,4 +1,3 @@
-
 'use client';
 
 import Image from "next/image";
@@ -223,10 +222,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
         >
             <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-center font-headline font-bold text-4xl text-gradient md:text-5xl">Наш мир</h2>
-                <p className="mt-4 text-lg text-foreground/80">
-                    Мы готовим кинематографический трейлер, чтобы показать всю красоту нашего мира. А пока - взгляните на небольшой тизер.
-                </p>
+                <h2 className="text-center font-headline font-bold text-4xl text-gradient md:text-5xl mb-8">Наш мир</h2>
                 <motion.div 
                   className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border-2 border-primary/20 shadow-2xl shadow-primary/10"
                   whileHover={{ scale: 1.02 }}
@@ -330,11 +326,9 @@ export default function Home() {
 
       <footer className="py-8">
         <div className="container mx-auto text-center text-sm text-foreground/60">
-            {year && <p>&copy; {year} kristory.fun</p>}
+            {year && <p>© {year} kristory.fun</p>}
         </div>
       </footer>
     </div>
   );
 }
-
-    
