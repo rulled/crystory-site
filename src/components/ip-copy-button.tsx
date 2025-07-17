@@ -39,7 +39,7 @@ export function IpCopyButton({ ipAddress }: { ipAddress: string }) {
   };
 
   return (
-    <div className="flex items-center justify-center gap-2 rounded-lg border border-primary/20 bg-background/50 p-2 backdrop-blur-sm sm:h-12 sm:p-3">
+    <div className="flex items-center justify-center gap-2 rounded-full border border-primary/20 bg-background/50 p-2 backdrop-blur-sm sm:h-12 sm:p-3">
       <span className="font-code text-lg text-primary sm:text-xl md:text-2xl">
         {ipAddress}
       </span>

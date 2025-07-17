@@ -182,7 +182,7 @@ export default function Home() {
                 whileHover={{ scale: 1.05, y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <Card className="h-full border-primary/20 bg-card/50 text-center transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
+                <Card className="h-full rounded-2xl border-primary/20 bg-card/50 text-center transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
                   <CardHeader className="items-center">
                     <div className="rounded-full bg-primary/10 p-4">
                       {adv.icon}
@@ -213,7 +213,7 @@ export default function Home() {
                     Мы готовим кинематографический трейлер, чтобы показать всю красоту нашего мира. А пока - взгляните на небольшой тизер.
                 </p>
                 <motion.div 
-                  className="relative mt-8 aspect-video w-full overflow-hidden rounded-xl border-2 border-primary/20 shadow-2xl shadow-primary/10"
+                  className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border-2 border-primary/20 shadow-2xl shadow-primary/10"
                   whileHover={{ scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
@@ -252,7 +252,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
-              <Card className="h-full border-primary/20 bg-card/50 flex flex-col items-center justify-center p-6 text-center">
+              <Card className="h-full rounded-2xl border-primary/20 bg-card/50 flex flex-col items-center justify-center p-6 text-center">
                   <Cpu className="h-12 w-12 text-primary"/>
                   <h3 className="mt-4 font-headline text-2xl">Топовый процессор</h3>
                   <p className="mt-2 text-foreground/80">AMD Ryzen 9 9950x</p>
@@ -264,7 +264,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             >
-              <Card className="h-full border-primary/20 bg-card/50 flex flex-col items-center justify-center p-6 text-center">
+              <Card className="h-full rounded-2xl border-primary/20 bg-card/50 flex flex-col items-center justify-center p-6 text-center">
                   <Server className="h-12 w-12 text-primary"/>
                   <h3 className="mt-4 font-headline text-2xl">Низкая задержка</h3>
                   <p className="mt-2 text-foreground/80">Сервер в Москве, пинг ниже 10 мс</p>
