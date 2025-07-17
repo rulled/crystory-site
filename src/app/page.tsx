@@ -102,7 +102,7 @@ export default function Home() {
               alt="Kristory Logo" 
               width={160} 
               height={160}
-              className="h-28 w-auto md:h-40"
+              className="h-32 w-auto md:h-44"
             />
           </motion.div>
           <motion.div
@@ -218,7 +218,7 @@ export default function Home() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                     <iframe
-                        src="https://player.vimeo.com/video/1035276791?h=2e190a614d&title=0&byline=0&portrait=0"
+                        src="https://player.vimeo.com/video/1102249814?title=0&byline=0&portrait=0"
                         className="absolute top-0 left-0 w-full h-full"
                         frameBorder="0"
                         allow="autoplay; fullscreen; picture-in-picture"
