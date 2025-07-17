@@ -44,7 +44,7 @@ export function ServerStatus() {
     return () => clearInterval(interval);
   }, []);
   
-  const containerClasses = "flex items-center justify-center gap-2 rounded-lg border border-primary/20 bg-background/50 p-2 backdrop-blur-sm text-foreground/80";
+  const containerClasses = "flex items-center justify-center gap-2 rounded-full border border-primary/20 bg-background/50 p-2 backdrop-blur-sm text-foreground/80";
 
   if (loading && !status) {
     return (
@@ -87,7 +87,7 @@ export function ServerStatus() {
             <span className="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
         </span>
         <span>
-            Игроков: {status.players?.online ?? 0}
+            {status.players?.online ?? 0}
         </span>
     </div>
   );
