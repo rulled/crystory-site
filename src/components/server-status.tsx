@@ -44,16 +44,12 @@ export function ServerStatus() {
     return () => clearInterval(interval);
   }, []);
   
-  const containerClasses = "flex flex-col items-center gap-1 text-foreground/80"
+  const containerClasses = "flex items-center justify-center gap-2 rounded-lg border border-primary/20 bg-background/50 p-2 backdrop-blur-sm text-foreground/80";
 
   if (loading && !status) {
     return (
         <div className={containerClasses}>
-            <div className="flex items-center gap-2">
-                <Skeleton className="h-3 w-3 rounded-full" />
-                <Skeleton className="h-4 w-24" />
-            </div>
-            <Skeleton className="h-4 w-16" />
+            <Skeleton className="h-4 w-24" />
         </div>
     );
   }
@@ -78,7 +74,7 @@ export function ServerStatus() {
             <span className="relative flex h-3 w-3">
                 <span className="relative inline-flex h-3 w-3 rounded-full bg-destructive"></span>
             </span>
-            <span>Сервер оффлайн</span>
+            <span>Оффлайн</span>
         </div>
       </div>
     );
@@ -86,13 +82,10 @@ export function ServerStatus() {
 
   return (
     <div className={containerClasses}>
-        <div className="flex items-center gap-2">
-            <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
-            </span>
-            <span>Сервер онлайн</span>
-        </div>
+        <span className="relative flex h-3 w-3">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
+        </span>
         <span>
             Игроков: {status.players?.online ?? 0}
         </span>
