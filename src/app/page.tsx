@@ -304,7 +304,7 @@ export default function Home() {
                   className="h-24 w-24 rounded-full bg-foreground/80 icon-mask transition-colors group-hover:bg-primary"
                   style={{'--icon-url': `url(${creator.icon})`} as React.CSSProperties}
                  />
-                <span className="font-headline text-3xl font-bold">
+                <span className="font-headline text-xl font-bold">
                   {creator.name}
                 </span>
               </motion.a>
@@ -321,9 +321,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-    
