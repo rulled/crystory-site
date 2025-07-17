@@ -44,7 +44,7 @@ export function ServerStatus() {
     return () => clearInterval(interval);
   }, []);
   
-  const containerClasses = "flex flex-col items-center gap-1 border border-primary/20 bg-background/50 p-3 backdrop-blur-sm text-foreground/80 trapezoid-clip"
+  const containerClasses = "flex flex-col items-center gap-1 text-foreground/80"
 
   if (loading && !status) {
     return (
