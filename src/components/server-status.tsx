@@ -87,7 +87,7 @@ export function ServerStatus() {
             <span className="relative inline-flex h-3 w-3 rounded-full bg-primary"></span>
         </span>
         <span>
-            {status.players?.online ?? 0}
+            Игроков онлайн: {status.players?.online ?? 0}
         </span>
     </div>
   );
