@@ -43,40 +43,49 @@ export function ServerStatus() {
     const interval = setInterval(fetchStatus, 30000);
     return () => clearInterval(interval);
   }, []);
+  
+  const containerClasses = "flex flex-col items-center gap-2 rounded-lg border border-primary/20 bg-background/50 p-3 backdrop-blur-sm text-foreground/80"
 
   if (loading && !status) {
     return (
-        <div className="flex items-center gap-2 text-foreground/80">
-            <Skeleton className="h-3 w-3 rounded-full" />
-            <Skeleton className="h-4 w-32" />
+        <div className={containerClasses}>
+            <div className="flex items-center gap-2">
+                <Skeleton className="h-3 w-3 rounded-full" />
+                <Skeleton className="h-4 w-24" />
+            </div>
+            <Skeleton className="h-4 w-16" />
         </div>
     );
   }
 
   if (error) {
       return (
-        <div className="flex items-center gap-2 text-destructive">
-            <span className="relative flex h-3 w-3">
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-destructive"></span>
-            </span>
-            <span>Ошибка статуса</span>
+        <div className={`${containerClasses} text-destructive`}>
+            <div className="flex items-center gap-2">
+                <span className="relative flex h-3 w-3">
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-destructive"></span>
+                </span>
+                <span>Ошибка статуса</span>
+            </div>
         </div>
       );
   }
 
   if (!status?.online) {
     return (
-      <div className="flex items-center gap-2 text-foreground/80">
-        <span className="relative flex h-3 w-3">
-            <span className="relative inline-flex h-3 w-3 rounded-full bg-destructive"></span>
-        </span>
-        <span>Сервер оффлайн</span>
+      <div className={containerClasses}>
+        <div className="flex items-center gap-2">
+            <span className="relative flex h-3 w-3">
+                <span className="relative inline-flex h-3 w-3 rounded-full bg-destructive"></span>
+            </span>
+            <span>Сервер оффлайн</span>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center gap-2 text-foreground/80">
+    <div className={containerClasses}>
         <div className="flex items-center gap-2">
             <span className="relative flex h-3 w-3">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
