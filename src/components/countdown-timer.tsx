@@ -25,15 +25,22 @@ const calculateTimeLeft = (targetDate: Date): TimeLeft | {} => {
 };
 
 export function CountdownTimer({ targetDate }: { targetDate: Date }) {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
+  // Initialize with an empty object on the server and calculate on the client
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | {}>({});
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    setIsClient(true);
+    // Set initial time left
+    setTimeLeft(calculateTimeLeft(targetDate));
+
+    const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft(targetDate));
     }, 1000);
 
-    return () => clearTimeout(timer);
-  });
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
 
   const timerComponents: JSX.Element[] = [];
 
@@ -56,11 +63,29 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
     );
   });
 
+  // Render a placeholder or nothing on the server, and the actual timer on the client
+  if (!isClient || !timerComponents.length) {
+    return (
+      <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
+            <span className="font-code text-3xl font-bold text-primary">--</span>
+            <span className="text-xs text-foreground/60 uppercase tracking-widest">Часов</span>
+          </div>
+          <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
+            <span className="font-code text-3xl font-bold text-primary">--</span>
+            <span className="text-xs text-foreground/60 uppercase tracking-widest">Минут</span>
+          </div>
+          <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
+            <span className="font-code text-3xl font-bold text-primary">--</span>
+            <span className="text-xs text-foreground/60 uppercase tracking-widest">Секунд</span>
+          </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center justify-center gap-4">
       {timerComponents.length ? timerComponents : <span>Время вышло!</span>}
     </div>
   );
 };
-
-    
