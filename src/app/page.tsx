@@ -147,7 +147,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="font-headline font-bold text-4xl text-gradient md:text-2xl">
+            <h2 className="font-headline font-bold text-4xl text-gradient md:text-5xl">
               Что такое Kristory?
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-foreground/80">
