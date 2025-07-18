@@ -14,7 +14,7 @@ import { FAQButton } from "@/components/faq-button";
 
 export default function Home() {
   const [year, setYear] = useState<number | null>(null);
-  const targetDate = new Date('2025-07-18T20:00:00+03:00');
+  const targetDate = new Date('2025-07-20T20:00:00+03:00');
 
   useEffect(() => {
     setYear(new Date().getFullYear());
@@ -129,26 +129,16 @@ export default function Home() {
           >
             <CountdownTimer targetDate={targetDate} />
           </motion.div>
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-            className="mb-10 flex flex-col items-center gap-2"
-          >
-            <IpCopyButton ipAddress="kristory.fun" />
-            <div className="flex flex-row gap-3">
-              <LauncherDownloadButton />
-              <FAQButton />
+          <div className="mb-10 flex flex-col items-center gap-2">
+            <IpCopyButton ipAddress="play.kristory.ru" />
+            <div className="flex flex-wrap items-center justify-center gap-3">
+               <LauncherDownloadButton />
+               <FAQButton />
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
-            className="flex flex-col items-center gap-4"
-          >
+          </div>
+          <div className="flex flex-col items-center gap-4">
             <ServerStatus />
-          </motion.div>
+          </div>
         </section>
 
         {/* About Section */}
