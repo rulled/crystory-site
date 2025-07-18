@@ -61,7 +61,7 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
     timerComponents.push(
       <div key={interval} className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
         <span className="font-code text-3xl font-bold text-primary">{String(value).padStart(2, '0')}</span>
-        <span className="text-xs text-foreground/60 uppercase tracking-widest">{labelMap[interval]}</span>
+        <span className="text-[10px] text-foreground/60 uppercase tracking-widest">{labelMap[interval]}</span>
       </div>
     );
   });
@@ -72,19 +72,19 @@ export function CountdownTimer({ targetDate }: { targetDate: Date }) {
       <div className="flex items-center justify-center gap-4">
           <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
             <span className="font-code text-3xl font-bold text-primary">--</span>
-            <span className="text-xs text-foreground/60 uppercase tracking-widest">Дней</span>
+            <span className="text-[10px] text-foreground/60 uppercase tracking-widest">Дней</span>
           </div>
           <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
             <span className="font-code text-3xl font-bold text-primary">--</span>
-            <span className="text-xs text-foreground/60 uppercase tracking-widest">Часов</span>
+            <span className="text-[10px] text-foreground/60 uppercase tracking-widest">Часов</span>
           </div>
           <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
             <span className="font-code text-3xl font-bold text-primary">--</span>
-            <span className="text-xs text-foreground/60 uppercase tracking-widest">Минут</span>
+            <span className="text-[10px] text-foreground/60 uppercase tracking-widest">Минут</span>
           </div>
           <div className="flex flex-col items-center justify-center rounded-[12px] border border-primary/20 bg-background/50 p-3 backdrop-blur-sm min-w-[80px]">
             <span className="font-code text-3xl font-bold text-primary">--</span>
-            <span className="text-xs text-foreground/60 uppercase tracking-widest">Секунд</span>
+            <span className="text-[10px] text-foreground/60 uppercase tracking-widest">Секунд</span>
           </div>
       </div>
     );
