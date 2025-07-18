@@ -130,7 +130,7 @@ export default function Home() {
             <CountdownTimer targetDate={targetDate} />
           </motion.div>
           <div className="mb-10 flex flex-col items-center gap-2">
-            <IpCopyButton ipAddress="play.kristory.ru" />
+            <IpCopyButton ipAddress="kristory.fun" />
             <div className="flex flex-wrap items-center justify-center gap-3">
                <LauncherDownloadButton />
                <FAQButton />
